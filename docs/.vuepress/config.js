@@ -14,12 +14,12 @@ import {
 
 export default {
   base: '/actionUse/',
+  //dest: './dist',
+  pagePatterns: ['**/*.md', '!.vuepress', '!node_modules'],
   locales: {
     // 键名是该语言所属的子路径
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     '/': {
-
-      lang: '简体中文',
       title: 'Demo',
       description: 'Vue 驱动的静态网站生成器',
       head: [
@@ -35,7 +35,6 @@ export default {
     //   description: 'Vue-powered Static Site Generator',
     // },
   },
-  pagePatterns: ['**/*.md', '!.vuepress', '!node_modules'],
   theme: defaultTheme({
     // 在这里进行配置
     // locales: {
@@ -54,17 +53,15 @@ export default {
         collapsible: true,
         children: ['/'],
       }, ],
-      '/Guide': [{
-          text: '指南',
-          collapsible: true,
-          children: ['/Guide/README.md', '/Guide/Test.md'],
-        },
-        {
-          text: '官方文档',
-          collapsible: true,
-          children: ['/Guide/Official.md'],
-        },
-      ],
+      '/Guide/': [{
+        text: '指南',
+        children: ['/Guide/README.md', '/Guide/getting-started.md'],
+      }],
+      '/Reference/': [{
+        text: 'VuePress',
+        collapsible: true,
+        children: ['/Reference/README.md'],
+      }],
     },
 
     navbar: [
@@ -74,19 +71,31 @@ export default {
         link: '/',
       },
       //字符串 - 页面文件路径
-      'Guide',
+      //'Guide',
+      {
+        text: '指南',
+        link: '/Guide/',
+      },
       // // NavbarGroup
       // {
       //   text: 'Group',
       //   children: ['group1', 'group2'],
       // }
+      // 嵌套 Group - 最大深度为 2
+      {
+        text: '参考',
+        children: [{
+          text: '官方文档',
+          children: ['/Reference/README.md'],
+        }, ],
+      },
     ],
     home: '/',
     logo: '/logo.png',
     colorMode: 'auto',
     colorModeSwitch: true,
     //gitub
-    repo: 'https://github.com/learnemt/CIuse',
+    repo: 'https://github.com/learnemt/actionUse',
     //repoLabel: '查看源码',
     //是否启用 编辑此页 链接。
     editLink: true,
@@ -99,7 +108,7 @@ export default {
     lastUpdatedText: '上次更新：',
     //贡献者
     contributors: true,
-    contributorsText: 'learnemt',
+    contributorsText: '贡献者',
 
 
     notFound: ['not found page!', '母鸡啊', '看起来我们进入了错误的链接', '我们怎么到这来了？', '这里什么都没有', '我们怎么到这来了？'],

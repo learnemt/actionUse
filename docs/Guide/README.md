@@ -1,10 +1,4 @@
----
-title: 指南
----
-<!-- 
-目录
-[[toc]] -->
-## 简介
+# 简介
 
 Vue 驱动的静态网站生成器  
 VuePress - <Badge type="tip" text="v0.0.1" vertical="middle" />
