@@ -1,8 +1,8 @@
 {
-  "name": "gaction",
-  "version": "1.0.0",
+  "name": "vpd",
+  "version": "1.0.1",
   "main": "index.js",
-  "repository": "https://github.com/learnemt/CIuse",
+  "repository": "https://github.com/learnemt/actionUse",
   "author": "learnemt",
   "license": "MIT",
   "devDependencies": {
