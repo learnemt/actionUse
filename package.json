@@ -1,0 +1,19 @@
+{
+  "name": "gaction",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/learnemt/CIuse",
+  "author": "learnemt",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.51",
+    "@vuepress/plugin-external-link-icon": "^2.0.0-beta.51",
+    "@vuepress/plugin-medium-zoom": "^2.0.0-beta.51",
+    "@vuepress/plugin-search": "^2.0.0-beta.51",
+    "vuepress": "^2.0.0-beta.51"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  }
+}
