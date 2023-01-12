@@ -13,7 +13,10 @@
     "vuepress": "^2.0.0-beta.51"
   },
   "scripts": {
+    "dev-d": "vuepress dev docs --open --port 8089 --no-watch",
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "info": "vuepress info",
+    "ver": "vuepress --version"
   }
 }

@@ -14,42 +14,49 @@ export default {
     // 键名是该语言所属的子路径
     // 作为特例，默认语言可以使用 '/' 作为其路径。
     '/': {
-      title: 'Demo',
-      description: 'Vue 驱动的静态网站生成器',
-      head: [
-        ['link', {
-          rel: 'icon',
-          href: '/actionUse/logo.png'
-        }]
-      ]
+      lang: 'zh-CN',
+      title: '文档',
+      description: 'Vue 驱动的文档',
+      head: [['link', { rel: 'icon', href: '/logo.png' }]]
     },
-    // '/en/': {
-    //   lang: 'en-US',
-    //   title: 'VuePress',
-    //   description: 'Vue-powered Static Site Generator',
-    // },
+    '/en/': {
+      lang: 'en-US',
+      title: 'Document',
+      description: 'Vue-powered Document',
+    },
   },
   theme: defaultTheme({
     // 在这里进行配置
-    // locales: {
-    //   '/': {
-    //     selectLanguageName: '简体中文',
-    //   },
-    //   '/en/': {
-    //     selectLanguageName: 'English',
-    //   },
-    // },
+    locales: {
+      '/': {
+        selectLanguageName: '简体中文',
+      },
+      '/en/': {
+        selectLanguageName: 'English',
+      },
+    },
+    home: '/',
     logo: '/logo.png',
+    colorMode: 'auto',
+    colorModeSwitch: true,  
     //gitub
     repo: 'learnemt/actionUse',
     //repoLabel: '查看源码',
+    //是否启用 编辑此页 链接。
+    editLink: true,
     editLinkText: '在 Github 编辑此页',
+    //editLinkPattern: '',
+    
+    //需要git插件支持才行
+    lastUpdated: true,
     //最近更新时间戳 标签的文字。
     lastUpdatedText: '上次更新：',
     //贡献者
-    contributorsText: '贡献者',
+    contributors: true,
+    contributorsText: 'learnemt',
+
     notFound: ['not found page!', '母鸡啊', '看起来我们进入了错误的链接', '我们怎么到这来了？', '这里什么都没有', '我们怎么到这来了？'],
-    backToHome: '迷路了？点我回到首页',
+    //backToHome: '迷路了？点我回到首页',
     // 可折叠的侧边栏
     sidebar: {
       '/': [{
@@ -110,8 +117,21 @@ export default {
   plugins: [
     searchPlugin({
       // 配置项
-      hotKeys: ['s', '/'],
-      maxSuggestions: 10
-    }),
+      locales: {
+        '/': {
+          placeholder: 's',
+          
+        },
+        '/en/': {
+         placeholder: 's'
+        },
+      },
+      // 排除首页
+      isSearchable: (page) => page.path !== '/',
+      // 允许搜索 Frontmatter 中的 `tags`
+      getExtraFields: (page) => page.frontmatter.tags ?? [],
+    hotKeys: ['s','/'],
+    maxSuggestions: 10
+    })
   ]
 }

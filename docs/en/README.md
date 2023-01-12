@@ -1,12 +1,10 @@
 ---
-title: 首页
+title: Home
 date: 2022-10-17
 home: true
-heroImage: /images/2.png
-heroAlt: 图片
-# 禁用大标题
+heroImage: /logo.png
+heroAlt: image
 heroText: null
-# 禁用站点 description
 #tagline: null
 head: 
   - [meta, { name: generator , content: VuePress 2.0.0-beta.51 }]
@@ -15,19 +13,19 @@ head:
   - [meta, { name: keywords , content: 文档 }]
   - [link, { name: shortcut icon , href: /logo.png , type: image/x-icon }]
 actions:
-  - text: 参考
+  - text: reference
     link: /article/
     type: primary
-  - text: 指南
+  - text: guide
     link: /guide/
     type: secondary
 features:
-  - title: 简洁至上
-    details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-  - title: Vue 驱动
-    details: 享受 Vue 的开发体验，可以在 Markdown 中使用 Vue 组件，又可以使用 Vue 来开发自定义主题。
-  - title: 高性能
-    details: VuePress 会为每个页面预渲染生成静态的 HTML，同时，每个页面被加载的时候，将作为 SPA 运行。
+  - title: Simplicity comes first
+    details: A Markdown-centric project structure that helps you focus on writing with minimal configuration.
+  - title: Vue driver
+    details: Enjoy the Vue development experience, you can use Vue components in Markdown, and you can use Vue to develop custom themes.
+  - title: Performance
+    details: VuePress will pre-render each page to generate static HTML, and each page will run as a SPA when it is loaded.
 footerHtml: true
 footer: MIT Licensed | Copyright © 2022-present <a href="https://github.com/learnemt">learnemt</a>
 ---
