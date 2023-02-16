@@ -11,8 +11,6 @@ export default {
   //dest: './dist',
   pagePatterns: ['**/*.md', '!.vuepress', '!node_modules'],
   locales: {
-    // 键名是该语言所属的子路径
-    // 作为特例，默认语言可以使用 '/' 作为其路径。
     '/': {
       lang: 'zh-CN',
       title: '文档',
@@ -26,7 +24,6 @@ export default {
     },
   },
   theme: defaultTheme({
-    // 在这里进行配置
     locales: {
       '/': {
         selectLanguageName: '简体中文',
@@ -38,7 +35,7 @@ export default {
     home: '/',
     logo: '/logo.png',
     colorMode: 'auto',
-    colorModeSwitch: true,  
+    colorModeSwitch: true,
     //gitub
     repo: 'learnemt/actionUse',
     //repoLabel: '查看源码',
@@ -56,7 +53,7 @@ export default {
     contributorsText: 'learnemt',
 
     notFound: ['not found page!', '母鸡啊', '看起来我们进入了错误的链接', '我们怎么到这来了？', '这里什么都没有', '我们怎么到这来了？'],
-    //backToHome: '迷路了？点我回到首页',
+    backToHome: '迷路了？点我回到首页',
     // 可折叠的侧边栏
     sidebar: {
       '/': [{
@@ -106,9 +103,7 @@ export default {
           {
             text: 'Npm',
             link: '/Reference/npm.md',
-            // 该元素在当前路由路径是 /foo/ 开头时激活
-            // 支持正则表达式
-            activeMatch: '^/Reference/npm.md',
+            activeMatch: '/Reference/npm.md',
           },
         ],
       },
