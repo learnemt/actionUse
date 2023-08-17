@@ -15,7 +15,7 @@ export default {
       lang: 'zh-CN',
       title: '文档',
       description: 'Vue 驱动的文档',
-      head: [['link', { rel: 'icon', href: '/logo.png' }]]
+      head: [['link', { rel: 'icon', href: '/actionUse/logo.png' }]]
     },
     '/en/': {
       lang: 'en-US',
