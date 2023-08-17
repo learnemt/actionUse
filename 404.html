@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.51">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <link rel="icon" href="/actionUse/logo.png"><title>文档</title><meta name="description" content="Vue 驱动的文档">
+    <link rel="modulepreload" href="/actionUse/assets/app.a3288283.js"><link rel="modulepreload" href="/actionUse/assets/404.html.a2acdacb.js"><link rel="modulepreload" href="/actionUse/assets/404.html.c3e557d0.js"><link rel="prefetch" href="/actionUse/assets/index.html.403c1fcc.js"><link rel="prefetch" href="/actionUse/assets/index.html.063b427d.js"><link rel="prefetch" href="/actionUse/assets/getting-started.html.c04fd310.js"><link rel="prefetch" href="/actionUse/assets/index.html.e083784c.js"><link rel="prefetch" href="/actionUse/assets/npm.html.cec3237c.js"><link rel="prefetch" href="/actionUse/assets/index.html.79b14991.js"><link rel="prefetch" href="/actionUse/assets/index.html.4ca5149e.js"><link rel="prefetch" href="/actionUse/assets/index.html.b1a0dd08.js"><link rel="prefetch" href="/actionUse/assets/getting-started.html.3f368337.js"><link rel="prefetch" href="/actionUse/assets/index.html.bbc2cf2f.js"><link rel="prefetch" href="/actionUse/assets/npm.html.4d4c7a20.js"><link rel="prefetch" href="/actionUse/assets/index.html.47eece7b.js">
+    <link rel="stylesheet" href="/actionUse/assets/style.903d2fb1.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><main class="page"><div class="theme-default-content"><h1>404</h1><blockquote>我们怎么到这来了？</blockquote><a href="/actionUse/" class="">迷路了？点我回到首页</a></div></main></div><!----><!--]--></div>
+    <script type="module" src="/actionUse/assets/app.a3288283.js" defer></script>
+  </body>
+</html>
